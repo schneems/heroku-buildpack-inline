@@ -3,13 +3,18 @@
 
 if [ ! -f "$1"/bin/detect ]; then
     echo "Your bin/detect file was not found"
-    ls -la bin/
+    ls -la "$1"/bin
 fi
 
 if [ ! -x "$1"/bin/detect ]; then
     echo "Your bin/detect is not executable"
     
-    ls -la bin/
+    ls -la "$1"/bin
 fi
+
+echo "============="
+ls -la "$1"/bin
+cat "$1"/bin/detect
+
 
 exec "$1"/bin/detect "$@"
