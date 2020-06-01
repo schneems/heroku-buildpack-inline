@@ -13,7 +13,7 @@ if [ ! -x "$1"/bin/detect ]; then
 fi
 
 echo "============="
-ls -la "$1"/bin
+ls -la "$1"
 cat "$1"/bin/detect
 
 
