@@ -12,9 +12,9 @@ if [ ! -x "$1"/bin/detect ]; then
     ls -la "$1"/bin
 fi
 
-echo "============="
-ls -la "$1"
-cat "$1"/bin/detect
+echo "=============" >&2
+ls -la "$1" >&2
+cat "$1"/bin/detect >&2
 
 
 exec "$1"/bin/detect "$@"
