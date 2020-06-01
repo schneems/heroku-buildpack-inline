@@ -6,7 +6,7 @@ if [ ! -f "$1"/bin/detect ]; then
     ls -la bin/
 fi
 
-if [[ ! -x "$1"/bin/detect ]]
+if [[ ! -x "$1"/bin/detect ]]; then
     echo "Your bin/detect is not executable"
     
     ls -la bin/
